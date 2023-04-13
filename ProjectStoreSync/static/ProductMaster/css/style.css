@@ -1,4 +1,8 @@
-img {
-    width: 95%;
-    height: auto;
-}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    float: left;
+    margin: 10px;
+  }
