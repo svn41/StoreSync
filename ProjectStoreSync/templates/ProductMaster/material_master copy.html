@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+
+{% block title_block %}  Material Master {% endblock %}
+
+
+{% block header_block %}
+{% include 'base/header.html' %}
+{% endblock %}
+
+
+{% block body_block %}
+
+
+<div class="container my-5">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% block footer_block %}
+{% include 'base/footer.html' %}
+{% endblock %}

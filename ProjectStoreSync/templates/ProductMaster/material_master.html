@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
 
-{% block title_block %}  Home {% endblock %}
+{% block title_block %}  Material Master {% endblock %}
 
 
 {% block header_block %}
@@ -11,16 +11,39 @@
 {% block body_block %}
 
 
-<div class="container">
-    <form method="post">
+<div class="container my-5">
+
+    <form action="" method = "post">
         {% csrf_token %}
-        {{ form.as_p }}
+
+        <div class="form-group my-2">
+            {{ form.materialName.label_tag }}
+            {{ form.materialName }}
+        </div>
+        <div class="form-group my-1">
+            {{ form.specifications.label_tag }}
+            {{ form.specifications }}
+        </div>
+        <div class="form-group my-1">
+            {{ form.minimum_quantity.label_tag }}
+            {{ form.minimum_quantity }}
+        </div>
+        <div class="form-group my-1">
+            {{ form.category.label_tag }}
+            {{ form.category }}
+        </div>
+        <div class="form-group my-1">
+            {{ form.unit.label_tag }}
+            {{ form.unit }}
+        </div>
+
         <button type="submit">Submit</button>
+
+
     </form>
+
+
 </div>
-
-
-
 
 
 {% endblock %}
