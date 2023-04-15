@@ -4,20 +4,27 @@
 
 
 {% block header_block %}
-
 {% include 'base/header.html' %}
-
 {% endblock %}
 
 
 {% block body_block %}
 
-{% include 'base/body.html' %}
+
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+
+
 
 {% endblock %}
 
 {% block footer_block %}
-
 {% include 'base/footer.html' %}
-
 {% endblock %}
